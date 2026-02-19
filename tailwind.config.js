@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./*.html,js,php'],
+  content: ['./**/*.{html,js,php}'],
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -13,7 +13,9 @@ module.exports = {
       colors:{
         renovaBlue: 'hsl(259, 73%, 28%)',
         renovaGreen: 'hsl(70, 93%, 44%)',
+        renovaBrightGreen: 'hsl(70, 93%, 50%)',
         renovaWhite: 'hsl(0, 0%, 85%)',
+        renovaPaleWhite: 'hsla(0, 0%, 85%, 0.6)',
         renovaBrightBlue: 'hsl(259, 80%, 39%)',
       },
       backgroundImage: {

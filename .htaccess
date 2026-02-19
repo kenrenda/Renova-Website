@@ -1,0 +1,12 @@
+# Enable rewrite engine
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Handle 404 errors by redirecting to 404.php
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ 404.php [L]
+</IfModule>
+
+# Custom 404 Error Page - fallback (relative path works whether site is at root or in subfolder)
+ErrorDocument 404 404.php

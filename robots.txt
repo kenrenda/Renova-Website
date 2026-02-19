@@ -1,0 +1,11 @@
+# Renova Creative - robots.txt for search engines
+User-agent: *
+Allow: /
+
+# Block common non-content paths (optional)
+Disallow: /node_modules/
+Disallow: /includes/
+
+# Sitemap: replace example.com with your live domain when you deploy
+# Example: Sitemap: https://renovamw.com/sitemap.php
+Sitemap: https://www.renovamw.com/sitemap.php
