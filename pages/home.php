@@ -41,11 +41,11 @@ include '../includes/navbar.php';
           <div class="flex flex-col md:flex-row md:space-x-6 md:justify-start">
             <button
               class="p-3 px-8 mb-6 text-renovaBlue bg-renovaGreen rounded-full text-xl md:mb-0 hover:bg-renovaBrightGreen transition-colors duration-200 transform-gpu active:scale-95 transition-transform duration-150 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2">
-              <a href="contact.php">Start a Project</a>
+              <a href="/contact">Start a Project</a>
             </button>
             <button
               class="p-3 px-8 text-white border-2 border-renovaGreen rounded-full text-xl hover:bg-renovaGreen hover:text-renovaBlue transition-colors duration-200 transform-gpu active:scale-95 transition-transform duration-150 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2">
-              <a href="portfolio.php">Explore Our Work</a>
+              <a href="/portfolio">Explore Our Work</a>
             </button>
           </div>
         </div>
@@ -86,7 +86,7 @@ include '../includes/navbar.php';
           </p>
           <button
             class="p-3 px-8 w-56 text-white bg-renovaBlue rounded-full text-xl hover:bg-renovaGreen hover:text-renovaBlue font-semibold transition-colors duration-200 transform-gpu active:scale-95 transition-transform duration-150 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2 mx-auto md:mx-0">
-            <a href="contact.php">Start a Project</a>
+            <a href="/contact">Start a Project</a>
           </button>
         </div>
       </div>
@@ -126,7 +126,7 @@ include '../includes/navbar.php';
             </p>
             <button
               class="p-3 px-8 w-52 text-renovaBlue rounded-full bg-renovaGreen text-xl font-semibold transition-colors duration-200 cursor-pointer transform-gpu group-hover:bg-renovaBlue group-hover:text-white duration-150 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2 btn-primary">
-              <a href="services.php">Discover More</a>
+              <a href="/services">Discover More</a>
             </button>
           </div>
           
@@ -150,7 +150,7 @@ include '../includes/navbar.php';
             </p>
             <button
               class="p-3 px-8 w-52 text-white rounded-full text-xl font-semibold transition-colors duration-200 bg-renovaBlue cursor-pointer transform-gpu group-hover:bg-renovaGreen group-hover:text-renovaBlue duration-150 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2 btn-primary2">
-              <a href="services.php">Discover More</a>
+              <a href="/services">Discover More</a>
             </button>
           </div>
           <!--Card 3-->
@@ -173,7 +173,7 @@ include '../includes/navbar.php';
             </p>
             <button
               class="p-3 px-8 w-52 text-renovaBlue rounded-full text-xl font-semibold transition-colors bg-renovaGreen cursor-pointer transform-gpu group-hover:bg-renovaBlue group-hover:text-white duration-150 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2 btn-primary">
-              <a href="services.php">Discover More</a>
+              <a href="/services">Discover More</a>
             </button>
           </div>
         </div>
@@ -214,7 +214,7 @@ include '../includes/navbar.php';
           <!--Card 1-->
           <div
             class="bg-renovaBlue w-full max-w-[340px] min-h-[400px] rounded-[28px] p-3 flex flex-col space-y-5 animate-card">
-            <a href="portfolio.php" class="featured-project-img-wrap min-h-[290px] w-full rounded-[18px] bg-renovaWhite flex items-center justify-center hover:bg-renovaBlue transition-colors duration-200 cursor-pointer">
+            <a href="/portfolio" class="featured-project-img-wrap min-h-[290px] w-full rounded-[18px] bg-renovaWhite flex items-center justify-center hover:bg-renovaBlue transition-colors duration-200 cursor-pointer">
               <img loading="lazy" class="featured-project-img object-contain object-cover w-full h-full" src="../assets/images/portfolio/careline Free Website Presentation Mockup.jpg" alt="Careline Courier" />
             </a>
             <div class="flex flex-col space-y-2 pb-7">
@@ -228,7 +228,7 @@ include '../includes/navbar.php';
           <!--Card 2-->
           <div
             class="bg-renovaBlue w-full max-w-[340px] min-h-[400px] rounded-[28px] p-3 flex flex-col space-y-5 animate-card">
-            <a href="portfolio.php" class="featured-project-img-wrap min-h-[290px] w-full rounded-[18px] bg-renovaWhite flex items-center justify-center hover:bg-renovaBlue transition-colors duration-200 cursor-pointer">
+            <a href="/portfolio" class="featured-project-img-wrap min-h-[290px] w-full rounded-[18px] bg-renovaWhite flex items-center justify-center hover:bg-renovaBlue transition-colors duration-200 cursor-pointer">
               <img loading="lazy" class="featured-project-img object-contain w-full h-full object-cover" src="../assets/images/portfolio/Free_Square_Sticker_Mockup_6 Omni furniture.jpg  " alt="Omni Furniture" />
             </a>
             <div class="flex flex-col space-y-2 pb-7">
@@ -242,7 +242,7 @@ include '../includes/navbar.php';
           <!--Card 3-->
           <div
             class="bg-renovaBlue w-full max-w-[340px] min-h-[400px] rounded-[28px] p-3 flex flex-col space-y-5 animate-card">
-            <a href="portfolio.php" class="featured-project-img-wrap min-h-[290px] w-full rounded-[18px] bg-renovaWhite flex items-center justify-center hover:bg-renovaBlue transition-colors duration-200 cursor-pointer ">
+            <a href="/portfolio" class="featured-project-img-wrap min-h-[290px] w-full rounded-[18px] bg-renovaWhite flex items-center justify-center hover:bg-renovaBlue transition-colors duration-200 cursor-pointer ">
               <img loading="lazy" class="featured-project-img object-contain w-full h-full object-cover" src="../assets/images/portfolio/Renova Website Presentation Mockup PSD.jpg" alt="Renova" />
             </a>
             <div class="flex flex-col space-y-2 pb-7">
@@ -333,16 +333,16 @@ include '../includes/navbar.php';
                 </div>
                 <div class="justify-start">
                   <h3 class="text-renovaGreen text-xl font-semibold text-left">
-                    Sarah Mwale
+                  Evance Chigwenembe
                   </h3>
                   <p class="text-sm text-left text-white">
-                    CEO, Tech Solutions Ltd.
+                    General Manager, Careline Courier & Logistics
                   </p>
                 </div>
               </div>
               <div class="">
                 <p class="text-white text-sm">
-                  Renova transformed our brand identity completely. Their creative approach and attention to detail exceeded our expectations. The team was professional and delivered on time.
+                Renova handled both our logo and website with impressive attention to detail. The result is a professional brand and digital presence that truly represents Careline’s reliability and growth
                 </p>
               </div>
             </div>
@@ -355,16 +355,16 @@ include '../includes/navbar.php';
                 </div>
                 <div class="justify-start">
                   <h3 class="text-renovaGreen text-xl font-semibold text-left">
-                    David Banda
+                    Kossam Ngwira
                   </h3>
                   <p class="text-sm text-left text-white">
-                    Founder, Digital Innovations
+                    Managing Director, First Car Hire
                   </p>
                 </div>
               </div>
               <div class="">
                 <p class="text-white text-sm">
-                  Working with Renova was a game-changer for our business. Their design solutions helped us stand out in the market and connect better with our customers. Highly recommended!
+                Renova gave our brand a fresh, confident identity that truly reflects who we are. The new look feels modern, trustworthy and perfectly aligned with our vision and mission
                 </p>
               </div>
             </div>

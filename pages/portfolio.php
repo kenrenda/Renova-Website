@@ -108,7 +108,7 @@ include '../includes/navbar.php';
                 Omni Furniture
               </h3>
               <a
-                href="project-omni-furniture.php"
+                href="/project-omni-furniture"
                 class="inline-block rounded-xl border border-renovaGreen px-5 py-2 text-xs font-medium text-white transition hover:border-renovaGreen hover:bg-renovaGreen hover:text-renovaBlue"
               >
                 View Details
@@ -138,7 +138,7 @@ include '../includes/navbar.php';
                 First Car Hire
               </h3>
               <a
-                href="project-first-car-hire.php"
+                href="/project-first-car-hire"
                 class="inline-block rounded-xl border border-renovaGreen px-5 py-2 text-xs font-medium text-white transition hover:border-renovaGreen hover:bg-renovaGreen hover:text-renovaBlue"
               >
                 View Details
@@ -170,7 +170,7 @@ include '../includes/navbar.php';
                 Careline Courier
               </h3>
               <a
-                href="project-careline-courier.php"
+                href="/project-careline-courier"
                 class="inline-block rounded-xl border border-renovaGreen px-5 py-2 text-xs font-medium text-white transition hover:border-renovaGreen hover:bg-renovaGreen hover:text-renovaBlue"
               >
                 View Details
@@ -200,7 +200,7 @@ include '../includes/navbar.php';
                 Renova
               </h3>
               <a
-                href="project-renova.php"
+                href="/project-renova"
                 class="inline-block rounded-xl border border-renovaGreen px-5 py-2 text-xs font-medium text-white transition hover:border-renovaGreen hover:bg-renovaGreen hover:text-renovaBlue"
               >
                 View Details
@@ -260,7 +260,7 @@ include '../includes/navbar.php';
                 Castle Gremu
               </h3>
               <a
-                href="project-castle-gremu.php"
+                href="/project-castle-gremu"
                 class="inline-block rounded-xl border border-renovaGreen px-5 py-2 text-xs font-medium text-white transition hover:border-renovaGreen hover:bg-renovaGreen hover:text-renovaBlue"
               >
                 View Details

@@ -33,12 +33,12 @@ include 'includes/navbar.php';
       <!-- Action Buttons -->
       <div class="flex flex-col md:flex-row md:space-x-6 pt-4">
         <a
-          href="pages/home.php"
+          href="/home"
           class="p-3 px-8 mb-6 text-renovaBlue bg-renovaGreen rounded-full text-xl md:mb-0 hover:bg-renovaBrightGreen transition-colors duration-200 transform-gpu active:scale-95 transition-transform duration-150 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2 text-center">
           Go Back Home
         </a>
         <a
-          href="pages/contact.php"
+          href="/contact"
           class="p-3 px-8 text-renovaBlue border-2 border-renovaGreen rounded-full text-xl hover:bg-renovaGreen hover:text-renovaBlue transition-colors duration-200 transform-gpu active:scale-95 transition-transform duration-150 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2 text-center">
           Contact Us
         </a>

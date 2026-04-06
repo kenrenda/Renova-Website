@@ -7,17 +7,14 @@
   $isInPagesDir = (!$is404) && ((strpos($scriptPath, DIRECTORY_SEPARATOR . 'pages' . DIRECTORY_SEPARATOR) !== false) || 
                   (strpos($phpSelf, '/pages/') !== false));
   
-  // For 404 page, use absolute paths
   if ($is404) {
     $documentRoot = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
     $scriptDir = str_replace('\\', '/', dirname($scriptPath));
     $relativePath = str_replace($documentRoot, '', $scriptDir);
     $baseUrl = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . $relativePath;
     $footerAssetPath = $baseUrl . '/assets';
-    $footerPagePath = $baseUrl . '/pages/';
   } else {
     $footerAssetPath = $isInPagesDir ? '../assets' : 'assets';
-    $footerPagePath = $isInPagesDir ? '' : 'pages/';
   }
   ?>
   <div class="bg-renovaBlue w-full py-24 px-5 md:px-20 flex flex-col">
@@ -41,16 +38,16 @@
         <h3 class="text-renovaGreen text-xl font-semibold text-center md:text-left">Useful Links</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-7">
           <div class="flex flex-col text-white text-lg">
-            <a class="mb-2 text-center md:text-left hover:text-renovaGreen" href="<?php echo $footerPagePath; ?>home.php">Home</a>
-            <a class="text-center md:text-left hover:text-renovaGreen" href="<?php echo $footerPagePath; ?>insideRenova.php">Inside Renova</a>
+            <a class="mb-2 text-center md:text-left hover:text-renovaGreen" href="/home">Home</a>
+            <a class="text-center md:text-left hover:text-renovaGreen" href="/inside">Inside Renova</a>
           </div>
           <div class="flex flex-col text-white text-lg">
-            <a class="mb-2 text-center md:text-left hover:text-renovaGreen" href="<?php echo $footerPagePath; ?>portfolio.php">Portfolio</a>
-            <a class="text-center md:text-left hover:text-renovaGreen" href="<?php echo $footerPagePath; ?>chronicles.php">Chronicles</a>
+            <a class="mb-2 text-center md:text-left hover:text-renovaGreen" href="/portfolio">Portfolio</a>
+            <a class="text-center md:text-left hover:text-renovaGreen" href="/chronicles">Chronicles</a>
           </div>
           <div class="flex flex-col text-white text-lg">
-            <a class="mb-2 text-center md:text-left hover:text-renovaGreen" href="<?php echo $footerPagePath; ?>services.php">Services</a>
-            <a class="text-center md:text-left hover:text-renovaGreen" href="<?php echo $footerPagePath; ?>contact.php">Contact Us</a>
+            <a class="mb-2 text-center md:text-left hover:text-renovaGreen" href="/services">Services</a>
+            <a class="text-center md:text-left hover:text-renovaGreen" href="/contact">Contact Us</a>
           </div>
         </div>
       </div>

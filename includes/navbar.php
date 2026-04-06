@@ -1,40 +1,36 @@
 <!--Navbar-->
 <?php
-// Get current page name
-$currentPage = basename($_SERVER['PHP_SELF']);
-// Determine asset path and page path based on where navbar.php is included from
-// Use SCRIPT_FILENAME for more reliable detection (works better with ErrorDocument)
+$currentPath = trim(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH), '/');
+$currentPath = $currentPath ?: 'home';
+
 $scriptPath = isset($_SERVER['SCRIPT_FILENAME']) ? $_SERVER['SCRIPT_FILENAME'] : '';
 $phpSelf = isset($_SERVER['PHP_SELF']) ? $_SERVER['PHP_SELF'] : '';
 $is404 = (basename($phpSelf) === '404.php' || basename($scriptPath) === '404.php');
 $isInPagesDir = (!$is404) && ((strpos($scriptPath, DIRECTORY_SEPARATOR . 'pages' . DIRECTORY_SEPARATOR) !== false) || 
                 (strpos($phpSelf, '/pages/') !== false));
 
-// For 404 page, use absolute paths to ensure Chrome resolves them correctly
 if ($is404) {
   $documentRoot = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
   $scriptDir = str_replace('\\', '/', dirname($scriptPath));
   $relativePath = str_replace($documentRoot, '', $scriptDir);
   $baseUrl = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . $relativePath;
   $assetPath = $baseUrl . '/assets';
-  $pagePath = $baseUrl . '/pages/';
 } else {
   $assetPath = $isInPagesDir ? '../assets' : 'assets';
-  $pagePath = $isInPagesDir ? '' : 'pages/';
 }
 
 $navLinks = [
-    'home' => ['href' => $pagePath . 'home.php', 'text' => 'Home'],
-    'insideRenova' => ['href' => $pagePath . 'insideRenova.php', 'text' => 'Inside Renova'],
-    'services' => ['href' => $pagePath . 'services.php', 'text' => 'Services'],
-    'portfolio' => ['href' => $pagePath . 'portfolio.php', 'text' => 'Portfolio'],
-    'chronicles' => ['href' => $pagePath . 'chronicles.php', 'text' => 'Chronicles']
+    'home' => ['href' => '/home', 'path' => 'home', 'text' => 'Home'],
+    'insideRenova' => ['href' => '/inside', 'path' => 'inside', 'text' => 'Inside Renova'],
+    'services' => ['href' => '/services', 'path' => 'services', 'text' => 'Services'],
+    'portfolio' => ['href' => '/portfolio', 'path' => 'portfolio', 'text' => 'Portfolio'],
+    'chronicles' => ['href' => '/chronicles', 'path' => 'chronicles', 'text' => 'Chronicles']
 ];
 ?>
 <nav id="main-navbar" class="sticky top-0 z-50 bg-white transition-shadow duration-300">
   <div class="max-w-7xl mx-auto flex items-center justify-between py-4 md:py-6 px-4 sm:px-5 md:px-20">
     <div class="flex-shrink-0">
-      <a href="<?php echo $pagePath; ?>home.php" class="block">
+      <a href="/home" class="block">
         <img loading="lazy"
           class="w-24 sm:w-28 md:w-32 h-auto transition-opacity duration-200 hover:opacity-80"
           src="<?php echo $assetPath; ?>/images/Renova logo horizontal 1.svg"
@@ -46,14 +42,14 @@ $navLinks = [
       <?php foreach ($navLinks as $key => $link): ?>
         <a
           href="<?php echo $link['href']; ?>"
-          class="<?php echo ($currentPage === $link['href']) ? 'text-renovaGreen' : 'hover:text-renovaBrightBlue'; ?> text-base lg:text-lg transition-colors duration-200 whitespace-nowrap"
+          class="<?php echo ($currentPath === $link['path']) ? 'text-renovaGreen' : 'hover:text-renovaBrightBlue'; ?> text-base lg:text-lg transition-colors duration-200 whitespace-nowrap"
           ><?php echo $link['text']; ?></a
         >
       <?php endforeach; ?>
     </div>
     <div class="hidden lg:flex lg:items-center lg:ml-4">
       <a
-        href="<?php echo $pagePath; ?>contact.php"
+        href="/contact"
         class="nav-button-slide p-2 px-6 xl:px-8 text-white bg-renovaBlue rounded-full text-base lg:text-lg font-semibold active:scale-95 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2 whitespace-nowrap"
         >
         <span class="transition-colors duration-300 hover:text-renovaBlue">Get in Touch</span>
@@ -80,7 +76,7 @@ $navLinks = [
   <div id="mobile-menu" class="fixed inset-y-0 left-0 w-[280px] sm:w-80 bg-white shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden overflow-y-auto">
     <div class="flex flex-col h-full pt-6 px-5 pb-6">
       <div id="mobile-menu-logo" class="mb-6 pb-6 border-b border-gray-200 flex-shrink-0 mobile-menu-item">
-        <a href="<?php echo $pagePath; ?>home.php" class="block">
+        <a href="/home" class="block">
           <img loading="lazy"
             class="w-28 h-auto"
             src="<?php echo $assetPath; ?>/images/Renova logo horizontal 1.svg"
@@ -92,14 +88,14 @@ $navLinks = [
         <?php foreach ($navLinks as $key => $link): ?>
           <a
             href="<?php echo $link['href']; ?>"
-            class="mobile-menu-link <?php echo ($currentPage === $link['href']) ? 'text-renovaGreen' : 'text-renovaBlue hover:text-renovaBrightBlue'; ?> block py-4 text-lg sm:text-xl transition-colors duration-200"
+            class="mobile-menu-link <?php echo ($currentPath === $link['path']) ? 'text-renovaGreen' : 'text-renovaBlue hover:text-renovaBrightBlue'; ?> block py-4 text-lg sm:text-xl transition-colors duration-200"
             ><?php echo $link['text']; ?></a
           >
         <?php endforeach; ?>
       </div>
       <div id="mobile-menu-button" class="mt-auto pt-4 flex-shrink-0 mobile-menu-item">
         <a
-          href="<?php echo $pagePath; ?>contact.php"
+          href="/contact"
           class="block p-3 text-center text-white bg-renovaBlue rounded-full text-base sm:text-lg font-semibold hover:bg-renovaGreen hover:text-renovaBlue transition-colors duration-200"
         >
           Get in Touch

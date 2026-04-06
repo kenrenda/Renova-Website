@@ -1,12 +1,38 @@
 # Enable rewrite engine
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  
-  # Handle 404 errors by redirecting to 404.php
+  # If your site is in a subfolder (e.g. domain.com/subfolder/), set: RewriteBase /subfolder/
+  RewriteBase /
+
+  # Redirect old URLs to clean URLs (301)
+  RewriteCond %{THE_REQUEST} \s/+pages/([a-zA-Z0-9_-]+)\.php[\s?] [NC]
+  RewriteRule ^pages/([a-zA-Z0-9_-]+)\.php$ /$1 [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+([a-zA-Z0-9_-]+)\.php[\s?] [NC]
+  RewriteRule ^([a-zA-Z0-9_-]+)\.php$ /$1 [R=301,L]
+
+  # Rewrite clean URLs to PHP files
+  RewriteRule ^home$ pages/home.php [L]
+  RewriteRule ^services$ pages/services.php [L]
+  RewriteRule ^portfolio$ pages/portfolio.php [L]
+  RewriteRule ^contact$ pages/contact.php [L]
+  RewriteRule ^chronicles$ pages/chronicles.php [L]
+  RewriteRule ^inside$ pages/insideRenova.php [L]
+  RewriteRule ^project-careline-courier$ pages/project-careline-courier.php [L]
+  RewriteRule ^project-renova$ pages/project-renova.php [L]
+  RewriteRule ^project-omni-furniture$ pages/project-omni-furniture.php [L]
+  RewriteRule ^project-metricore-systems$ pages/project-metricore-systems.php [L]
+  RewriteRule ^project-first-car-hire$ pages/project-first-car-hire.php [L]
+  RewriteRule ^project-castle-gremu$ pages/project-castle-gremu.php [L]
+
+  # Root -> home
+  RewriteRule ^$ pages/home.php [L]
+
+  # 404 for non-existent files/dirs
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.*)$ 404.php [L]
 </IfModule>
 
-# Custom 404 Error Page - fallback (relative path works whether site is at root or in subfolder)
+# Custom 404 Error Page
 ErrorDocument 404 404.php

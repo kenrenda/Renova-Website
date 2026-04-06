@@ -11,7 +11,7 @@ include '../includes/navbar.php';
 <section class="max-w-7xl mx-auto px-5 py-12">
   <div class="max-w-4xl mx-auto">
     <div class="mb-6">
-      <a href="portfolio.php" class="text-renovaBlue hover:text-renovaGreen transition-colors inline-flex items-center gap-2 mb-4">
+      <a href="/portfolio" class="text-renovaBlue hover:text-renovaGreen transition-colors inline-flex items-center gap-2 mb-4">
         <i class="fas fa-arrow-left"></i>
         <span>Back to Portfolio</span>
       </a>

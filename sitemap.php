@@ -12,18 +12,18 @@ $baseUrl = $protocol . '://' . $host . $base;
 $baseUrl = rtrim($baseUrl, '/');
 
 $pages = [
-    ['loc' => '/pages/home.php', 'priority' => '1.0', 'changefreq' => 'weekly'],
-    ['loc' => '/pages/services.php', 'priority' => '0.9', 'changefreq' => 'monthly'],
-    ['loc' => '/pages/portfolio.php', 'priority' => '0.9', 'changefreq' => 'weekly'],
-    ['loc' => '/pages/contact.php', 'priority' => '0.9', 'changefreq' => 'monthly'],
-    ['loc' => '/pages/chronicles.php', 'priority' => '0.8', 'changefreq' => 'weekly'],
-    ['loc' => '/pages/insideRenova.php', 'priority' => '0.8', 'changefreq' => 'monthly'],
-    ['loc' => '/pages/project-careline-courier.php', 'priority' => '0.7', 'changefreq' => 'monthly'],
-    ['loc' => '/pages/project-renova.php', 'priority' => '0.7', 'changefreq' => 'monthly'],
-    ['loc' => '/pages/project-omni-furniture.php', 'priority' => '0.7', 'changefreq' => 'monthly'],
-    ['loc' => '/pages/project-metricore-systems.php', 'priority' => '0.7', 'changefreq' => 'monthly'],
-    ['loc' => '/pages/project-first-car-hire.php', 'priority' => '0.7', 'changefreq' => 'monthly'],
-    ['loc' => '/pages/project-castle-gremu.php', 'priority' => '0.7', 'changefreq' => 'monthly'],
+    ['loc' => '/home', 'priority' => '1.0', 'changefreq' => 'weekly'],
+    ['loc' => '/services', 'priority' => '0.9', 'changefreq' => 'monthly'],
+    ['loc' => '/portfolio', 'priority' => '0.9', 'changefreq' => 'weekly'],
+    ['loc' => '/contact', 'priority' => '0.9', 'changefreq' => 'monthly'],
+    ['loc' => '/chronicles', 'priority' => '0.8', 'changefreq' => 'weekly'],
+    ['loc' => '/inside', 'priority' => '0.8', 'changefreq' => 'monthly'],
+    ['loc' => '/project-careline-courier', 'priority' => '0.7', 'changefreq' => 'monthly'],
+    ['loc' => '/project-renova', 'priority' => '0.7', 'changefreq' => 'monthly'],
+    ['loc' => '/project-omni-furniture', 'priority' => '0.7', 'changefreq' => 'monthly'],
+    ['loc' => '/project-metricore-systems', 'priority' => '0.7', 'changefreq' => 'monthly'],
+    ['loc' => '/project-first-car-hire', 'priority' => '0.7', 'changefreq' => 'monthly'],
+    ['loc' => '/project-castle-gremu', 'priority' => '0.7', 'changefreq' => 'monthly'],
 ];
 
 $lastmod = date('c');

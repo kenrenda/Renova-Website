@@ -18,7 +18,7 @@
         <button
           class="p-3 px-8 w-56 text-renovaBlue bg-renovaGreen rounded-full text-xl hover:bg-renovaBrightGreen font-semibold transition-colors duration-200 transform-gpu active:scale-95 transition-transform duration-150 focus:outline-none focus:ring-2 focus:ring-renovaGreen focus:ring-offset-2 mx-auto md:mx-0"
         >
-          <a href="contact.php">Start a Project</a>
+          <a href="/contact">Start a Project</a>
         </button>
       </div>
       <div class="w-full md:w-1/2 flex justify-center md:justify-start animate-on-scroll fade-in-right">
